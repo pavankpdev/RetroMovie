@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://www.themoviedb.org/documentation/api/discover -->
+<html lang="en" class="no-js k-webkit k-webkit78 gr__themoviedb_org"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Discover Examples — The Movie Database (TMDb)</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="cleartype" content="on">
+    
+    <meta name="msapplication-TileColor" content="#00d573">
+    <meta name="msapplication-TileImage" content="https://www.themoviedb.org/assets/2/v4/icons/mstile-144x144-30e7905a8315a080978ad6aeb71c69222b72c2f75d26dab1224173a96fecc962.png">
+    <meta name="keywords" content="Movies, TV Shows, Reviews, API, Actors, Actresses, Photos, User Ratings, Synopsis, Trailers, Teasers, Credits, Cast">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    
+    <meta name="viewport" content="width=1120">
+    
+    <meta name="theme-color" content="#071d25">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.themoviedb.org/apple-touch-icon.png">
+<link rel="shortcut icon" type="image/icon" href="https://www.themoviedb.org/favicon.ico">
+<link rel="icon" type="image/png" href="https://www.themoviedb.org/favicon-32x32.png" sizes="32x32">
+<link rel="manifest" href="https://www.themoviedb.org/manifest.json">
+<link rel="mask-icon" href="https://www.themoviedb.org/safari-pinned-tab.svg" color="#00d474">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="preconnect" href="https://image.tmdb.org/" crossorigin="">
+    <link rel="canonical" href="https://www.themoviedb.org/documentation/api/discover">
+    <link rel="search" type="application/opensearchdescription+xml" title="TMDb Search" href="https://www.themoviedb.org/opensearch.xml">
+    <link rel="stylesheet" href="./Discover Examples — The Movie Database (TMDb)_files/css">
+    <link rel="preload" href="https://www.themoviedb.org/assets/2/glyphicons-regular-eedc7581ecfd9bb57b1af16ad7ad4428aa147de4f08e01f49a768c801a29de84.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="https://www.themoviedb.org/assets/2/glyphicons-social-regular-3b9b636e607f21a1cfd4b7ea97c940476b79c6e6319086b20cdc67695b10a2a3.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="stylesheet" href="./Discover Examples — The Movie Database (TMDb)_files/application-397aa443c36b051bf4c28fda53b4ea69eb25b5b8e5e93b7d08a497f2cd75616d.css">
+    
+    
+    
+      <meta name="description" content="The Movie Database (TMDb) is a popular, user editable database for movies and TV shows.">
+    
+    
+    <link rel="alternate" hreflang="x-default" href="https://www.themoviedb.org/documentation/api/discover">
+<link rel="alternate" hreflang="ar" href="https://www.themoviedb.org/documentation/api/discover/ar">
+<link rel="alternate" hreflang="be" href="https://www.themoviedb.org/documentation/api/discover/be">
+<link rel="alternate" hreflang="bg" href="https://www.themoviedb.org/documentation/api/discover/bg">
+<link rel="alternate" hreflang="bn" href="https://www.themoviedb.org/documentation/api/discover/bn">
+<link rel="alternate" hreflang="ca" href="https://www.themoviedb.org/documentation/api/discover/ca">
+<link rel="alternate" hreflang="ch" href="https://www.themoviedb.org/documentation/api/discover/ch">
+<link rel="alternate" hreflang="cn" href="https://www.themoviedb.org/documentation/api/discover/cn">
+<link rel="alternate" hreflang="cs" href="https://www.themoviedb.org/documentation/api/discover/cs">
+<link rel="alternate" hreflang="da" href="https://www.themoviedb.org/documentation/api/discover/da">
+<link rel="alternate" hreflang="de" href="https://www.themoviedb.org/documentation/api/discover/de">
+<link rel="alternate" hreflang="el" href="https://www.themoviedb.org/documentation/api/discover/el">
+<link rel="alternate" hreflang="en" href="https://www.themoviedb.org/documentation/api/discover/en">
+<link rel="alternate" hreflang="eo" href="https://www.themoviedb.org/documentation/api/discover/eo">
+<link rel="alternate" hreflang="es" href="https://www.themoviedb.org/documentation/api/discover/es">
+<link rel="alternate" hreflang="et" href="https://www.themoviedb.org/documentation/api/discover/et">
+<link rel="alternate" hreflang="eu" href="https://www.themoviedb.org/documentation/api/discover/eu">
+<link rel="alternate" hreflang="fa" href="https://www.themoviedb.org/documentation/api/discover/fa">
+<link rel="alternate" hreflang="fi" href="https://www.themoviedb.org/documentation/api/discover/fi">
+<link rel="alternate" hreflang="fr" href="https://www.themoviedb.org/documentation/api/discover/fr">
+<link rel="alternate" hreflang="gl" href="https://www.themoviedb.org/documentation/api/discover/gl">
+<link rel="alternate" hreflang="he" href="https://www.themoviedb.org/documentation/api/discover/he">
+<link rel="alternate" hreflang="hi" href="https://www.themoviedb.org/documentation/api/discover/hi">
+<link rel="alternate" hreflang="hu" href="https://www.themoviedb.org/documentation/api/discover/hu">
+<link rel="alternate" hreflang="id" href="https://www.themoviedb.org/documentation/api/discover/id">
+<link rel="alternate" hreflang="it" href="https://www.themoviedb.org/documentation/api/discover/it">
+<link rel="alternate" hreflang="ja" href="https://www.themoviedb.org/documentation/api/discover/ja">
+<link rel="alternate" hreflang="ka" href="https://www.themoviedb.org/documentation/api/discover/ka">
+<link rel="alternate" hreflang="kk" href="https://www.themoviedb.org/documentation/api/discover/kk">
+<link rel="alternate" hreflang="kn" href="https://www.themoviedb.org/documentation/api/discover/kn">
+<link rel="alternate" hreflang="ko" href="https://www.themoviedb.org/documentation/api/discover/ko">
+<link rel="alternate" hreflang="lt" href="https://www.themoviedb.org/documentation/api/discover/lt">
+<link rel="alternate" hreflang="lv" href="https://www.themoviedb.org/documentation/api/discover/lv">
+<link rel="alternate" hreflang="ml" href="https://www.themoviedb.org/documentation/api/discover/ml">
+<link rel="alternate" hreflang="ms" href="https://www.themoviedb.org/documentation/api/discover/ms">
+<link rel="alternate" hreflang="nb" href="https://www.themoviedb.org/documentation/api/discover/nb">
+<link rel="alternate" hreflang="nl" href="https://www.themoviedb.org/documentation/api/discover/nl">
+<link rel="alternate" hreflang="no" href="https://www.themoviedb.org/documentation/api/discover/no">
+<link rel="alternate" hreflang="pl" href="https://www.themoviedb.org/documentation/api/discover/pl">
+<link rel="alternate" hreflang="pt" href="https://www.themoviedb.org/documentation/api/discover/pt">
+<link rel="alternate" hreflang="ro" href="https://www.themoviedb.org/documentation/api/discover/ro">
+<link rel="alternate" hreflang="ru" href="https://www.themoviedb.org/documentation/api/discover/ru">
+<link rel="alternate" hreflang="si" href="https://www.themoviedb.org/documentation/api/discover/si">
+<link rel="alternate" hreflang="sk" href="https://www.themoviedb.org/documentation/api/discover/sk">
+<link rel="alternate" hreflang="sl" href="https://www.themoviedb.org/documentation/api/discover/sl">
+<link rel="alternate" hreflang="sr" href="https://www.themoviedb.org/documentation/api/discover/sr">
+<link rel="alternate" hreflang="sv" href="https://www.themoviedb.org/documentation/api/discover/sv">
+<link rel="alternate" hreflang="ta" href="https://www.themoviedb.org/documentation/api/discover/ta">
+<link rel="alternate" hreflang="te" href="https://www.themoviedb.org/documentation/api/discover/te">
+<link rel="alternate" hreflang="tl" href="https://www.themoviedb.org/documentation/api/discover/tl">
+<link rel="alternate" hreflang="th" href="https://www.themoviedb.org/documentation/api/discover/th">
+<link rel="alternate" hreflang="tr" href="https://www.themoviedb.org/documentation/api/discover/tr">
+<link rel="alternate" hreflang="uk" href="https://www.themoviedb.org/documentation/api/discover/uk">
+<link rel="alternate" hreflang="vi" href="https://www.themoviedb.org/documentation/api/discover/vi">
+<link rel="alternate" hreflang="zh" href="https://www.themoviedb.org/documentation/api/discover/zh">
+<link rel="alternate" hreflang="zu" href="https://www.themoviedb.org/documentation/api/discover/zu">
+
+    
+
+    <script type="text/javascript" async="" src="./Discover Examples — The Movie Database (TMDb)_files/linkid.js.download"></script><script type="text/javascript" async="" src="./Discover Examples — The Movie Database (TMDb)_files/analytics.js.download"></script><script async="" src="./Discover Examples — The Movie Database (TMDb)_files/gtm.js.download"></script><script src="./Discover Examples — The Movie Database (TMDb)_files/lazysizes.min-ecd9153f15ee5598e45550c41ad0591c3d26687f4c54eedfb66c77a8568a9c62.js.download" async=""></script>
+    <script src="./Discover Examples — The Movie Database (TMDb)_files/application-a950042c848f42326d45e92a7bfc51223b338e74bd8d040090977d2239fad437.js.download"></script>
+    <script src="./Discover Examples — The Movie Database (TMDb)_files/pusher.min-07db6b3cb7095c3bbfd72bd98853986dd25eb0114718330c1ee6d0f20587fcbd.js.download"></script>
+
+    
+
+    <script>
+      
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5QWVXV');
+    </script>
+
+    
+  <style type="text/css">
+button.btn[data-v-cef78672]{display:inline-block;font-weight:300;line-height:1.25;text-align:center;white-space:nowrap;vertical-align:middle;user-select:none;border:1px solid transparent;cursor:pointer;letter-spacing:1px;transition:all .15s ease
+}
+button.btn.btn-sm[data-v-cef78672]{padding:.4rem .8rem;font-size:.8rem;border-radius:.2rem
+}
+button.btn.btn-primary[data-v-cef78672]{color:#fff;background-color:#45C8F1;border-color:#45C8F1
+}
+button.btn.btn-outline-primary[data-v-cef78672]{color:#45C8F1;background-color:transparent;border-color:#45C8F1
+}
+button.btn.btn-danger[data-v-cef78672]{color:#fff;background-color:#FF4949;border-color:#FF4949
+}
+.text-muted[data-v-cef78672]{color:#8492A6
+}
+.text-center[data-v-cef78672]{text-align:center
+}
+.drop-down-enter[data-v-cef78672],.drop-down-leave-to[data-v-cef78672]{transform:translateX(0) translateY(-20px);transition-timing-function:cubic-bezier(0.74, 0.04, 0.26, 1.05);opacity:0
+}
+.drop-down-enter-active[data-v-cef78672],.drop-down-leave-active[data-v-cef78672]{transition:all .15s
+}
+.move-left-enter[data-v-cef78672],.move-left-leave-to[data-v-cef78672]{transform:translateY(0) translateX(-80px);transition-timing-function:cubic-bezier(0.74, 0.04, 0.26, 1.05);opacity:0
+}
+.move-left-enter-active[data-v-cef78672],.move-left-leave-active[data-v-cef78672]{transition:all .15s
+}
+.shake[data-v-cef78672]{animation:shake-data-v-cef78672 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;transform:translate3d(0, 0, 0)
+}
+@keyframes shake-data-v-cef78672{
+10%,90%{transform:translate3d(-1px, 0, 0)
+}
+20%,80%{transform:translate3d(2px, 0, 0)
+}
+30%,50%,70%{transform:translate3d(-4px, 0, 0)
+}
+40%,60%{transform:translate3d(4px, 0, 0)
+}
+}
+.pulse[data-v-cef78672]{animation:pulse-data-v-cef78672 2s ease infinite
+}
+@keyframes pulse-data-v-cef78672{
+0%{opacity:.7
+}
+50%{opacity:.4
+}
+100%{opacity:.7
+}
+}
+.flash-once[data-v-cef78672]{animation:flash-once 3.5s ease 1
+}
+@keyframes fade-up-data-v-cef78672{
+0%{transform:translate3d(0, 10px, 0);opacity:0
+}
+100%{transform:translate3d(0, 0, 0);opacity:1
+}
+}
+.fade-in[data-v-cef78672]{animation:fade-in-data-v-cef78672 .3s ease-in-out
+}
+@keyframes fade-in-data-v-cef78672{
+0%{opacity:0
+}
+100%{opacity:1
+}
+}
+.spin[data-v-cef78672]{animation-name:spin-data-v-cef78672;animation-duration:2000ms;animation-iteration-count:infinite;animation-timing-function:linear
+}
+@keyframes spin-data-v-cef78672{
+from{transform:rotate(0deg)
+}
+to{transform:rotate(360deg)
+}
+}
+.bounceIn[data-v-cef78672]{animation-name:bounceIn-data-v-cef78672;transform-origin:center bottom;animation-duration:1s;animation-fill-mode:both;animation-iteration-count:1
+}
+@keyframes bounceIn-data-v-cef78672{
+0%,20%,40%,60%,80%,100%{-webkit-transition-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1);transition-timing-function:cubic-bezier(0.215, 0.61, 0.355, 1)
+}
+0%{opacity:1;-webkit-transform:scale3d(0.8, 0.8, 0.8);transform:scale3d(0.8, 0.8, 0.8)
+}
+20%{-webkit-transform:scale3d(1.1, 1.1, 1.1);transform:scale3d(1.1, 1.1, 1.1)
+}
+40%{-webkit-transform:scale3d(0.9, 0.9, 0.9);transform:scale3d(0.9, 0.9, 0.9)
+}
+60%{opacity:1;-webkit-transform:scale3d(1.03, 1.03, 1.03);transform:scale3d(1.03, 1.03, 1.03)
+}
+80%{-webkit-transform:scale3d(0.97, 0.97, 0.97);transform:scale3d(0.97, 0.97, 0.97)
+}
+100%{opacity:1;-webkit-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1)
+}
+}
+@keyframes dots-data-v-cef78672{
+0%,20%{color:rgba(0,0,0,0);text-shadow:0.25em 0 0 rgba(0,0,0,0),0.5em 0 0 rgba(0,0,0,0)
+}
+40%{color:#8492A6;text-shadow:0.25em 0 0 rgba(0,0,0,0),0.5em 0 0 rgba(0,0,0,0)
+}
+60%{text-shadow:0.25em 0 0 #8492A6,0.5em 0 0 rgba(0,0,0,0)
+}
+80%,100%{text-shadow:.25em 0 0 #8492A6, .5em 0 0 #8492A6
+}
+}
+@keyframes recording-data-v-cef78672{
+0%{box-shadow:0px 0px 5px 0px rgba(173,0,0,0.3)
+}
+65%{box-shadow:0px 0px 5px 5px rgba(173,0,0,0.3)
+}
+90%{box-shadow:0px 0px 5px 5px rgba(173,0,0,0)
+}
+}
+html[data-v-cef78672]{max-height:500px
+}
+body[data-v-cef78672]{margin:0;font-size:100%;color:#3C4858;width:350px;max-height:500px
+}
+a[data-v-cef78672]{text-decoration:none;color:#45C8F1
+}
+h1[data-v-cef78672],h2[data-v-cef78672],h3[data-v-cef78672],h4[data-v-cef78672]{margin-top:0
+}
+.container_selected_area[data-v-cef78672]{padding:0px;position:fixed;z-index:1000000;top:0px;left:0px;right:0px;bottom:0px;display:none;visibility:hidden
+}
+.container_selected_area.active[data-v-cef78672]{visibility:visible;display:block
+}
+.container_selected_area .label[data-v-cef78672]{font-family:"Didact Gothic Regular",sans-serif;font-size:22px;text-align:center;padding-top:15px
+}
+.container_selected_area .area[data-v-cef78672]{border:1px solid #1e83ff;background:rgba(30,131,255,0.1);display:none;position:fixed;z-index:1000000;box-sizing:border-box
+}
+.container_selected_area .area.active[data-v-cef78672]{display:block;top:0px;left:0px
+}
+.hide[data-v-cef78672]{display:none
+}
+</style></head>
+<body class="en v4" data-gr-c-s-loaded="true">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QWVXV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+
+  <div class="page_wrap _wrap">
+
+<header class="smaller">
+  <div class="content">
+    <div class="sub_media">
+      
+        <ul class="small right">
+          <li><a href="https://www.themoviedb.org/apps">Apps</a></li>
+          <li><a href="https://www.themoviedb.org/discuss">Forums</a></li>
+          <li><a href="https://www.themoviedb.org/leaderboard">Leaderboard</a></li>
+          <li><a href="https://www.themoviedb.org/contribute">Contribute</a></li>
+          <li><a href="https://www.themoviedb.org/documentation/api">API</a></li>
+          <li><a href="https://www.themoviedb.org/talk">Support</a></li>
+        </ul>
+      
+
+      <div class="left">
+        <ul class="primary">
+          
+            <li class="logo">
+              <a href="https://www.themoviedb.org/">
+                <img src="./Discover Examples — The Movie Database (TMDb)_files/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg" alt="The Movie Database (TMDb)" width="81" height="72">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.themoviedb.org/discover">Discover</a>
+              <ul class="sub_menu discover hide">
+                <li><a href="https://www.themoviedb.org/discover/movie">Movies</a></li>
+                <li><a href="https://www.themoviedb.org/discover/tv">TV Shows</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://www.themoviedb.org/movie">Movies</a>
+              <ul class="sub_menu movie hide">
+                <li><a href="https://www.themoviedb.org/movie">Popular</a></li>
+                <li><a href="https://www.themoviedb.org/movie/top-rated">Top Rated</a></li>
+                <li><a href="https://www.themoviedb.org/movie/upcoming">Upcoming</a></li>
+                <li><a href="https://www.themoviedb.org/movie/now-playing">Now Playing</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://www.themoviedb.org/tv">TV Shows</a>
+              <ul class="sub_menu tv hide">
+                <li><a href="https://www.themoviedb.org/tv">Popular</a></li>
+                <li><a href="https://www.themoviedb.org/tv/top-rated">Top Rated</a></li>
+                <li><a href="https://www.themoviedb.org/tv/on-the-air">On TV</a></li>
+                <li><a href="https://www.themoviedb.org/tv/airing-today">Airing Today</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://www.themoviedb.org/person">People</a>
+              <ul class="sub_menu person hide">
+                <li><a href="https://www.themoviedb.org/person">Popular People</a></li>
+              </ul>
+            </li>
+          
+        </ul>
+      </div>
+
+      
+        <div class="right">
+          <ul class="primary">
+            <li>
+              <div class="glyph_wrapper">
+                <a class="glyph new_icon no_click" href="https://www.themoviedb.org/documentation/api/discover#">
+                  <span class="glyphicons glyphicons-plus"></span>
+                  <div class="rollover">
+                    
+                      <p>Can't find a movie or TV show? Login to create it.</p>
+                    
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="translate" data-role="tooltip">
+              <div>en</div>
+            </li>
+            
+              <li><a href="https://www.themoviedb.org/login">Login</a></li>
+              <li><a href="https://www.themoviedb.org/account/signup">Sign Up</a></li>
+            
+          </ul>
+        </div>
+      
+    </div>
+  </div>
+  <div class="search_bar">
+    <section class="search">
+      <div class="sub_media">
+        <form id="search_form" action="https://www.themoviedb.org/search" method="get" accept-charset="utf-8">
+          
+          <span tabindex="-1" role="presentation" class="k-widget k-autocomplete k-header k-autocomplete-clearable k-state-default" style=""><input dir="auto" id="search_v4" name="query" type="text" tabindex="0" autocorrect="off" autofill="off" autocomplete="off" spellcheck="false" placeholder="Search for a movie, tv show, person..." value="" data-role="autocomplete" class="k-input" role="textbox" aria-haspopup="true" aria-disabled="false" aria-readonly="false" aria-owns="search_v4_listbox" aria-autocomplete="list"><span unselectable="on" class="k-icon k-clear-value k-i-close k-hidden" title="clear" role="button" tabindex="-1"></span><span class="k-icon k-i-loading" style="display:none"></span></span>
+          <input type="submit" disabled="">
+        </form>
+      </div>
+    </section>
+  </div>
+<div class="k-list-container k-popup k-group k-reset" id="search_v4-list" data-role="popup" aria-hidden="true" style="display: none; position: absolute;"><div class="k-group-header" style="display:none"></div><div class="k-list-scroller" unselectable="on"><ul unselectable="on" class="k-list k-reset" tabindex="-1" aria-hidden="true" id="search_v4_listbox" aria-live="polite" data-role="staticlist" role="listbox"></ul></div><div class="k-nodata" style="display:none"><div></div></div></div></header>
+<main id="main" class="">
+  <div class="media">
+    <section class="main_content">
+  <nav>
+    <ul>
+      <li>
+        <a class="account" href="https://www.themoviedb.org/about/our-history" title="About TMDb">About TMDb</a>
+        <ul class="sub_nav hide">
+          <li><a href="https://www.themoviedb.org/about/our-history">Our History</a></li>
+          <li><a href="https://www.themoviedb.org/about/staying-in-touch">Staying In Touch</a></li>
+          <li><a href="https://www.themoviedb.org/about/logos-attribution">Logos &amp; Attribution</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="account" href="https://www.themoviedb.org/apps" title="Apps">Apps</a>
+      </li>
+      <li>
+        <a class="account active" href="https://www.themoviedb.org/documentation/api" title="API">API</a>
+        <ul class="sub_nav show">
+          <li><a href="https://www.themoviedb.org/documentation/api">Overview</a></li>
+          <li><a href="https://www.themoviedb.org/documentation/api/discover">Discover Examples</a></li>
+          <li><a href="https://www.themoviedb.org/documentation/api/sessions">Sessions</a></li>
+          <li><a href="https://www.themoviedb.org/documentation/api/status-codes">Status Codes</a></li>
+          <li><a href="https://www.themoviedb.org/talk/category/5047958519c29526b50017d6">Support</a></li>
+          <li><a href="https://www.themoviedb.org/documentation/api/terms-of-use">Terms of Use</a></li>
+          <li><a href="https://www.themoviedb.org/documentation/api/wrappers-libraries">Wrappers &amp; Libraries</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="account" href="https://www.themoviedb.org/documentation/community/guidelines" title="Community Guidelines">Community Guidelines</a>
+      </li>
+      <li>
+        <a class="account" href="https://www.themoviedb.org/faq/general" title="FAQ">FAQ</a>
+        <ul class="sub_nav hide" style="display: none;">
+          <li><a href="https://www.themoviedb.org/faq/general">General</a></li>
+          <li><a href="https://www.themoviedb.org/faq/account">Account</a></li>
+          <li><a href="https://www.themoviedb.org/faq/api">API</a></li>
+          <li><a href="https://www.themoviedb.org/about/logos-attribution">Logos &amp; Attribution</a></li>
+          <li><a href="https://www.themoviedb.org/faq/website">Website</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="content convert_emoji">
+    
+      <h2>Discover API Examples</h2>
+
+<p>Our discover methods can be very powerful tools when you're looking for specific data. Below are some examples to showcase some of the powerful things you can do.</p>
+
+<h3 class="category">What movies are in theatres?</h3>
+
+<p><strong>URL</strong>: <code>/discover/movie?primary_release_date.gte=2014-09-15&amp;primary_release_date.lte=2014-10-22</code></p>
+
+<h3 class="category">What are the most popular movies?</h3>
+
+<p><strong>URL</strong>: <code>/discover/movie?sort_by=popularity.desc</code></p>
+
+<h3 class="category">What are the highest rated movies rated R?</h3>
+
+<p><strong>URL</strong>: <code>/discover/movie/?certification_country=US&amp;certification=R&amp;sort_by=vote_average.desc</code></p>
+
+<h3 class="category">What are the most popular kids movies?</h3>
+
+<p><strong>URL</strong>: <code>/discover/movie?certification_country=US&amp;certification.lte=G&amp;sort_by=popularity.desc</code></p>
+
+<h3 class="category">What is are the best movies from 2010?</h3>
+
+<p><strong>URL</strong>: <code>/discover/movie?primary_release_year=2010&amp;sort_by=vote_average.desc</code></p>
+
+<h3 class="category">What are the best dramas that were released this year?</h3>
+
+<p><strong>URL</strong>: <code>/discover/movie?with_genres=18&amp;primary_release_year=2014</code></p>
+
+<h3 class="category">What are the highest rated science fiction movies that Tom Cruise has been in?</h3>
+
+<p><strong>URL</strong>: <code>/discover/movie?with_genres=878&amp;with_cast=500&amp;sort_by=vote_average.desc</code></p>
+
+<h3 class="category">What are the Will Ferrell's highest grossing comedies?</h3>
+
+<p><strong>URL</strong>: <code>/discover/movie?with_genres=35&amp;with_cast=23659&amp;sort_by=revenue.desc</code></p>
+
+<h3 class="category">Have Brad Pitt and Edward Norton ever been in a movie together?</h3>
+
+<p><strong>URL</strong>: <code>/discover/movie?with_people=287,819&amp;sort_by=vote_average.desc</code></p>
+
+<h3 class="category">Has David Fincher ever worked with Rooney Mara?</h3>
+
+<p><strong>URL</strong>: <code>/discover/movie?with_people=108916,7467&amp;sort_by=popularity.desc</code></p>
+
+<h3 class="category">What are the best drama's?</h3>
+
+<p><strong>URL</strong>: <code>/discover/movie?with_genres=18&amp;sort_by=vote_average.desc&amp;vote_count.gte=10</code></p>
+
+<h3 class="category">What are Liam Neeson's highest grossing rated 'R' movies?</h3>
+
+<p><strong>URL</strong>: <code>/discover/movie?certification_country=US&amp;certification=R&amp;sort_by=revenue.desc&amp;with_cast=3896</code></p>
+
+    
+  </section>
+
+  <div style="clear: both;"></div>
+</section>
+  </div>
+</main>
+
+    </div> <!-- page_wrap opened in html_head -->
+
+    <style>
+      footer {
+        
+          background-image: url('https://www.themoviedb.org/assets/2/v4/footers_v2/ToyStory-8a52629a740122f599c3d21599897a219ecb936efd6131b0a4667103ffff6375.jpg'), radial-gradient(at 30% top, rgba(7, 64, 52, 1) 0%, rgba(8, 28, 36, 1) 70%);
+        
+      }
+    </style>
+
+    <footer class="single_column lazyloaded">
+      <nav>
+        <div class="join">
+          <img src="./Discover Examples — The Movie Database (TMDb)_files/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg" alt="The Movie Database (TMDb)" width="130" height="116">
+
+          
+            <a class="rounded" href="https://www.themoviedb.org/account/signup">Join the Community</a>
+          
+        </div>
+
+        <div>
+          <h3>The Basics</h3>
+          <ul>
+            <li><a href="https://www.themoviedb.org/about">About TMDb</a></li>
+            <li><a href="https://www.themoviedb.org/about/staying-in-touch">Contact Us</a></li>
+            <li><a href="https://www.themoviedb.org/talk">Support Forums</a></li>
+            <li><a href="https://www.themoviedb.org/documentation/api">API</a></li>
+            <li><a href="https://blog.themoviedb.org/" target="_blank" rel="noopener">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Get Involved</h3>
+          <ul>
+            <li><a href="https://www.themoviedb.org/bible"><span class="glyphicons glyphicons-asterisk"></span> Contribution Bible</a></li>
+            <li><a href="https://www.themoviedb.org/apps">3rd Party Applications</a></li>
+            <li><a href="https://www.themoviedb.org/movie/new">Add New Movie</a></li>
+            <li><a href="https://www.themoviedb.org/tv/new">Add New TV Show</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Community</h3>
+          <ul>
+            <li><a href="https://www.themoviedb.org/documentation/community/guidelines">Guidelines</a></li>
+            <li><a href="https://www.themoviedb.org/leaderboard">Leaderboard</a></li>
+            <li><a href="https://www.themoviedb.org/discuss">Forums</a></li>
+            <li><a href="https://twitter.com/themoviedb" target="_blank" rel="noopener">Twitter</a></li>
+            <li><a href="https://www.facebook.com/themoviedb" target="_blank" rel="noopener">Facebook</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="https://www.themoviedb.org/documentation/website/terms-of-use">Terms of Use</a></li>
+            <li><a href="https://www.themoviedb.org/privacy-policy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+
+    
+
+    <script>
+      function appendStyle(styles) {
+        var css = document.createElement('style');
+        css.type = 'text/css';
+
+        if (css.styleSheet) {
+          css.styleSheet.cssText = styles;
+        } else {
+          css.appendChild(document.createTextNode(styles));
+        }
+
+        document.getElementsByTagName("head")[0].appendChild(css);
+      }
+    </script>
+
+    
+      <div id="settings_tooltip" class="hide">
+        <div class="settings_content">
+          <div class="group no_pad">
+            <p><a href="https://www.themoviedb.org/login">Login</a></p>
+          </div>
+          <div class="group">
+            <p><a href="https://www.themoviedb.org/account/signup">Sign Up</a></p>
+          </div>
+        </div>
+      </div>
+    
+
+    <div id="keyboard_shortcuts_popup" class="hide">
+      
+    </div>
+
+    <div class="hide">
+      <div id="video_popup"></div>
+    </div>
+
+    
+
+    <script src="./Discover Examples — The Movie Database (TMDb)_files/progressive.min-b7700026dd68db00344c999ba373d235771d76f758310dc3a48a20ff94beab11.js.download"></script>
+    <script src="./Discover Examples — The Movie Database (TMDb)_files/footer-045190bee931e60ab4cf194dccc581f255f94e156ef6392562d74017b682b93a.js.download"></script>
+    
+      <script src="./Discover Examples — The Movie Database (TMDb)_files/jquery.timeago.en-US-f9d144e55407ca11f35de7a0d44b0d54ec1ffc6c4039dffd5a11c0a12e6a9482.js.download"></script>
+    
+    
+      <script src="./Discover Examples — The Movie Database (TMDb)_files/kendo.culture.en-US.min-16651d326ca6eba9d5643ae6b5f537ae83ee3d434b48f4f74200e7fd446a255d.js.download"></script>
+    
+
+    <script type="text/javascript" charset="utf-8">
+      kendo.culture("en-US");
+
+      $('#cookie_notice a.accept').on('click', function(e) {
+        e.preventDefault();
+        var set_cookie = Cookies.set('cookie_policy', 'true', { domain: '.www.themoviedb.org', expires: 15551999 });
+        $('#cookie_notice').fadeOut('fast');
+      });
+
+      function convertEmoji() {
+        $(".convert_emoji").each(function() {
+          var original = $(this).html();
+          var converted = emojione.shortnameToImage(original);
+          $(this).html(converted);
+        });
+      }
+
+      emojione.imageType = 'svg';
+      emojione.imagePathSVG = '/emojis/static_cache/v2/';
+
+      $(document).ready(function(){
+        jQuery.timeago.settings.allowFuture = true;
+        $("time.timeago").timeago();
+
+        convertEmoji();
+
+        $("section.inner_content ul.shortcut_bar li").each(function(index) {
+          $(this).css({ 'z-index': index + 2 });
+
+          if ( menu = $(this).attr('data-sub-menu') ) {
+            $('#' + menu).css({ 'z-index': index + 2 });
+          }
+        });
+
+        function getMenuItem(object) {
+          var currentItem = $(object);
+          var menu = $('#' + currentItem.attr('data-sub-menu'));
+          var position = currentItem.offset();
+
+          return { currentItem: currentItem, menu: menu, position: position }
+        }
+
+        
+          var entered = false;
+
+          $('section.inner_content ul.shortcut_bar li.no_hover').on({
+            mouseenter: function(e) {
+              $('section.inner_content ul.shortcut_bar li.no_hover').removeClass('open');
+              $('section.inner_content div.inner_sub_menu').removeClass('visible');
+
+              var menu_item = getMenuItem(this);
+              var nav_item = $(this);
+              var spacer = 0;
+              if ( $('#media_v4').hasClass('person_v4 header_medium') ) {
+                spacer = 553;
+              }
+
+              nav_item.toggleClass('open');
+              menu_item.menu.find('li.primary').height(menu_item.currentItem.parent().height())
+              menu_item.menu.toggleClass('visible').css({ top: (menu_item.position.top - spacer), left: (menu_item.position.left - 10), 'min-width': (menu_item.currentItem.width() + 10) });
+
+              menu_item.menu.on('mouseleave', function() {
+                nav_item.removeClass('open');
+                menu_item.menu.removeClass('visible');
+              });
+            }
+          });
+        
+
+        var hover_tooltip = $('li.user a.no_click.tooltip_hover').kendoTooltip({
+          position: 'bottom',
+          show: function(e) {
+            $("div.k-tooltip-button").addClass('hide');
+            this.popup.element.addClass("tmdb_theme_white");
+            this.element.removeClass('keyboard');
+          }
+        }).data("kendoTooltip");
+
+        $('li.user a.no_click').kendoTooltip({
+          autoHide: false,
+          showOn: 'click',
+          width: 180,
+          position: 'bottom',
+          content: function() {
+            return $("#settings_tooltip").html();
+          },
+          show: function(e) {
+            hover_tooltip.hide();
+            $("div.k-tooltip-button").addClass('hide');
+            this.popup.element.addClass("tmdb_theme_white no_pad");
+
+            if (this.element.hasClass('keyboard')) {
+              this.popup.element.find('p a')[0].focus();
+            }
+          }
+        });
+
+        $('li.translate').kendoTooltip({
+          autoHide: false,
+          content: {
+            url: "/translation_popup?language=en-US&media_type=&media_id=&referral=%2Fdocumentation%2Fapi%2Fdiscover",
+            cache: true,
+            headers: {
+              'Accept-Language': 'en-US',
+              'Content-Type': 'text/html;charset=utf-8'
+            }
+          },
+          showOn: 'click',
+          width: 300,
+          position: 'bottom',
+          show: function(e) {
+            $("div.k-tooltip-button").addClass('hide');
+            this.popup.element.addClass("min_100px_height");
+            this.popup.element.addClass("tmdb_theme_light");
+          }
+        });
+
+        $('li.new').kendoTooltip({
+          autoHide: false,
+          showOn: 'click',
+          width: 240,
+          position: 'bottom',
+          content: function() {
+            return $("div.new_buttons");
+          },
+          show: function(e) {
+            this.popup.element.addClass("tmdb_theme_light");
+            $("div.k-tooltip-button").addClass('hide');
+            $("div.new_buttons").toggleClass('hide');
+          },
+          hide: function(e) {
+            $("div.new_buttons").toggleClass('hide');
+          }
+        });
+
+        
+
+        $("body *").on('click', 'a.no_click', function(e) {
+          e.preventDefault();
+        });
+
+        $("ul > li").hover(function() {
+          $(this).find("ul.sub_nav.hide").toggle();
+        });
+
+        
+          $("header ul.primary li").hover(function(e) {
+            if ($('header').hasClass('normal')) {
+              $(this).find("ul.hide").toggle();
+            }
+          });
+        
+
+        
+          function init() {
+            window.addEventListener('scroll', function(e) {
+              var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                shrinkOn = 60,
+                header = document.querySelector("header");
+              if (distanceY > shrinkOn) {
+                $('header').removeClass("normal").removeClass("regular").addClass("smaller");
+              } else {
+                if ($('header').hasClass("smaller")) {
+                  $('header').addClass("normal").addClass("regular").removeClass("smaller");
+                }
+              }
+            });
+          }
+          window.onload = init();
+        
+
+        showSuccess = function(message, title) {
+          if (title === undefined) {
+            title = 'Success';
+          }
+
+          showNotification({
+            title: title,
+            message: message
+          }, "success");
+        };
+
+        showError = function(message, title) {
+          if (title === undefined) {
+            title = 'Error';
+          }
+
+          showNotification({
+            title: title,
+            message: message
+          }, "error");
+        };
+
+        var showNotification = (function() {
+          var notification = $("span#notification").kendoNotification({
+            stacking: "down",
+            
+              position: {
+                top: 20,
+                left: null,
+                bottom: null,
+                right: 20
+              },
+            
+            autoHideAfter: 5000,
+            show: function(e) {
+              e.element.parent().css({
+                zIndex: 99999
+              });
+            },
+            templates: [{
+              type: "error",
+              template: $("#errorTemplate").html()
+            },{
+              type: "success",
+              template: $("#successTemplate").html()
+            }]
+          }).data("kendoNotification");
+
+          return function(msg, type) {
+            notification.show(msg, type);
+          };
+        })();
+
+        var keyboard_shortcut_popup = $('#keyboard_shortcuts_popup div.content').kendoWindow({
+          title: 'Keyboard Shortcuts',
+          actions: [ "Close" ],
+          modal: true,
+          draggable: false,
+          resizable: false,
+          visible: false,
+          pinned: true,
+          animation: {
+            open: {
+              effects: "fade:in"
+            },
+            close: {
+              effects: "fade:out"
+            }
+          },
+          open: function() {
+            $('body').addClass('blur');
+          },
+          close: function() {
+            $('body').removeClass('blur');
+          }
+        }).data("kendoWindow").center();
+
+        $('#keyboard_shortcuts').on('click', function() {
+          keyboard_shortcut_popup.open();
+        });
+
+        var seach_redirect_template = "/search{0}?query={1}&language=en-US";
+        var selected_item = null;
+
+        function processSelectedItem(e) {
+          if (selected_item) {
+            return
+          } else {
+            if (e) {
+              var dataItem = this.dataItem(e.item.index());
+              switch(dataItem.media_type) {
+                case 'movie':
+                  selected_item = kendo.format(seach_redirect_template, '/movie', encodeURIComponent(dataItem.title));
+                  break;
+                case 'tv':
+                  selected_item = kendo.format(seach_redirect_template, '/tv', encodeURIComponent(dataItem.name));
+                  break;
+                case 'person':
+                  selected_item = kendo.format(seach_redirect_template, '/person', encodeURIComponent(dataItem.name));
+                  break;
+                default:
+                  selected_item = kendo.format(seach_redirect_template, '', encodeURIComponent(dataItem));
+              }
+            } else {
+              selected_item = kendo.format(seach_redirect_template, '', encodeURIComponent($("#search_v4").data("kendoAutoComplete").value()));
+            }
+          }
+
+          window.location = selected_item;
+        }
+
+        $("#search_v4").kendoAutoComplete({
+          highlightFirst: false,
+          animation: false,
+          minLength: 1,
+          dataTextField: "title",
+          template: kendo.template($("#slim_multi_search_template").html()),
+          noDataTemplate: $("#search_no_data_template").html(),
+          ignoreCase: false,
+          dataSource: {
+            type: "json",
+            serverFiltering: true,
+            transport: {
+              read: '/search/trending?language=en-US',
+              parameterMap: function() {
+                return { query: $("#search_v4").data("kendoAutoComplete").value() };
+              }
+            },
+            schema: {
+              data: "results"
+            }
+          },
+          popup: {
+            appendTo: $("header")
+          },
+          filtering: function(e) {
+            var filter = e.filter;
+            if (filter.value == '') {
+              if( ($('#search_v4-list #trending_search_header_template').length) == 0 ) {
+                $('#search_v4_listbox').empty();
+                $('#search_v4-list').prepend($("#search_v4_headerTemplate").html());
+              }
+            } else {
+              $("#trending_search_header_template").remove();
+            }
+          },
+          select: processSelectedItem
+        }).data("kendoAutoComplete");
+
+        $('header #search_form').submit(function() {
+          return false;
+        });
+
+        $('#search_v4').keydown(function(event) {
+          if(event.keyCode == 13) {
+            processSelectedItem();
+          }
+        });
+
+        var autocompleteInput = $('section.search .k-autocomplete input');
+        autocompleteInput.on('focus', function (e) {
+          var value = autocompleteInput.val();
+          if (value == null || value == '') {
+            $("#search_v4").data("kendoAutoComplete").search('');
+          }
+        });
+
+        $('header span.k-i-close[title="clear"]').on('click', function(e) {
+          $('#search_v4').data("kendoAutoComplete").focus();
+        });
+
+        
+
+        public_media_type_map = { 'movie': 'Movie', 'tv': 'TV Show', 'person': 'Person' };
+
+        
+
+        $(document).on('keydown', null, 'b', function() {
+          if ( $('a.keyboard_s.parent').length ) {
+            $('a.keyboard_s.parent')[0].click();
+          }
+        });
+
+        $(document).on('keyup', null, 's', function() {
+          if ( $('#search_v4').length ) {
+            $("#search_v4").data("kendoAutoComplete").focus('').value('');
+          }
+        });
+
+        $(document).on('keyup', null, 'shift+/', function() {
+          keyboard_shortcut_popup.open();
+        });
+
+        $(document).on('keydown', null, 'left', function() {
+          if ( $('span.previous a.keyboard_s').length ) {
+            $('span.previous a.keyboard_s')[0].click();
+          }
+        });
+
+        $(document).on('keydown', null, 'right', function() {
+          if ( $('span.next a.keyboard_s').length ) {
+            $('span.next a.keyboard_s')[0].click();
+          }
+        });
+
+      });
+    </script>
+
+    <script id="person_template_with_known_for" type="text/x-kendo-tmpl">
+      <div class="item profile list_item known_for">
+        <div class="image_content profile">
+          # if (data.profile_path) { #
+            <img class="lazyload fade" data-src="https://image.tmdb.org/t/p/w66_and_h66_face${data.profile_path}" alt="${data.name}" width="45" height="45" data-srcset="https://image.tmdb.org/t/p/w66_and_h66_face${data.profile_path} 1x, https://image.tmdb.org/t/p/w132_and_h132_face${data.profile_path} 2x">
+          # } else { #
+            <div class="no_image_holder w45_and_h45 profile"></div>
+          # } #
+        </div>
+
+        <div class="content">
+          <p class="name">${data.name}</p>
+          # if (data.known_for) { #
+            <p class="sub">${data.known_for_department} &bull; ${data.known_for}</p>
+          # } else { #
+            <p class="sub">No known credits.</p>
+          # } #
+        </div>
+        <div class="clear"></div>
+      </div>
+    </script>
+
+    <script id="person_result_template" type="text/x-kendo-tmpl">
+      <div class="ac_item profile list_item known_for">
+        <div class="image_content profile">
+          # if (data.profile_path) { #
+            <img class="lazyload fade" data-src="https://image.tmdb.org/t/p/w66_and_h66_face${data.profile_path}" alt="${data.name}" width="45" height="45" data-srcset="https://image.tmdb.org/t/p/w66_and_h66_face${data.profile_path} 1x, https://image.tmdb.org/t/p/w132_and_h132_bestv2${data.profile_path} 2x">
+          # } else { #
+            <div class="no_image_holder w45_and_h45 profile"></div>
+          # } #
+        </div>
+
+        <div class="content">
+          <p class="name">${data.name}</p>
+          # if (data.known_for) { #
+            <p class="sub">
+              # for (var i = 0; i < data.known_for.length; i++) { #
+              <span class="comma">#= data.known_for[i].title ? data.known_for[i].title : data.known_for[i].name #</span>
+              # } #
+            </p>
+          # } else { #
+            <p class="sub">No known credits.</p>
+          # } #
+        </div>
+
+        <p><span class="media_type person">#= public_media_type_map[data.media_type] #</span></p>
+      </div>
+    </script>
+
+    <script id="movie_result_template" type="text/x-kendo-tmpl">
+      <div class="ac_item poster list_item">
+        <div class="image_content poster">
+          # if (data.poster_path) { #
+            <img class="lazyload fade" data-src="https://image.tmdb.org/t/p/w45_and_h67_bestv2${data.poster_path}" alt="${data.title}" width="45" height="67" data-srcset="https://image.tmdb.org/t/p/w45_and_h67_bestv2${data.poster_path} 1x, https://image.tmdb.org/t/p/w90_and_h134_bestv2${data.poster_path} 2x">
+          # } else { #
+            <div class="no_image_holder w45_and_h67"></div>
+          # } #
+        </div>
+
+        <div class="content">
+          <p class="name">${data.title}</p>
+          <p class="sub">
+            # if (data.original_title !== data.title) { #
+              <span class="comma"><span class="original_title">#= data.original_title #</span></span>
+            # } #
+            # if (data.release_date) { #
+              <span class="comma"><span class="release_date">#= data.release_date #</span></span>
+            # } #
+          </p>
+        </div>
+
+        <p><span class="media_type movie">#= public_media_type_map[data.media_type] #</span></p>
+      </div>
+    </script>
+
+    <script id="tv_show_result_template" type="text/x-kendo-tmpl">
+      <div class="ac_item poster list_item">
+        <div class="image_content poster">
+          # if (data.poster_path) { #
+            <img class="lazyload fade" data-src="https://image.tmdb.org/t/p/w45_and_h67_bestv2${data.poster_path}" alt="${data.title}" width="45" height="67" data-srcset="https://image.tmdb.org/t/p/w45_and_h67_bestv2${data.poster_path} 1x, https://image.tmdb.org/t/p/w90_and_h134_bestv2${data.poster_path} 2x">
+          # } else { #
+            <div class="no_image_holder w45_and_h67"></div>
+          # } #
+        </div>
+
+        <div class="content">
+          <p class="name">${data.name}</p>
+          <p class="sub">
+            # if (data.original_name !== data.name) { #
+              <span class="comma"><span class="original_title">#= data.original_name #</span></span>
+            # } #
+            # if (data.first_air_date) { #
+              <span class="comma"><span class="release_date">#= data.first_air_date #</span></span>
+            # } #
+          </p>
+        </div>
+
+        <p><span class="media_type tv">#= public_media_type_map[data.media_type] #</span></p>
+      </div>
+    </script>
+
+    <script id="slim_movie_result_template" type="text/x-kendo-tmpl">
+      <div class="ac_item poster list_item">
+        <div class="image_content poster">
+          # if (data.poster_path) { #
+            <img class="lazyload fade" data-src="https://image.tmdb.org/t/p/w45_and_h67_bestv2${data.poster_path}" alt="${data.title}" width="45" height="67" data-srcset="https://image.tmdb.org/t/p/w45_and_h67_bestv2${data.poster_path} 1x, https://image.tmdb.org/t/p/w90_and_h134_bestv2${data.poster_path} 2x">
+          # } else { #
+            <div class="no_image_holder w45_and_h67"></div>
+          # } #
+        </div>
+
+        <div class="content">
+          <p class="name">${data.title}</p>
+          <p class="sub">
+            # if (data.original_title !== data.title) { #
+              <span class="comma"><span class="original_title">#= data.original_title #</span></span>
+            # } #
+            # if (data.release_date) { #
+              <span class="comma"><span class="release_date">#= data.release_date #</span></span>
+            # } #
+          </p>
+        </div>
+
+        <p><span class="media_type movie">#= public_media_type_map[data.media_type] #</span></p>
+      </div>
+    </script>
+
+    <script id="multi_search_template" type="text/x-kendo-tmpl">
+      <div class="ac_results">
+        # if (data.media_type == 'movie') { #
+          #= kendo.render(kendo.template($("\\#movie_result_template").html()), [data]) #
+        # } else if (data.media_type == 'tv') { #
+          #= kendo.render(kendo.template($("\\#tv_show_result_template").html()), [data]) #
+        # } else if (data.media_type == 'person') { #
+          #= kendo.render(kendo.template($("\\#person_result_template").html()), [data]) #
+        # } #
+      </div>
+    </script>
+
+    <script id="search_v4_headerTemplate" type="text/x-kendo-template">
+      <div id="trending_search_header_template" class="slim_search_results_header">
+        <div class="wrapper">
+          <h2>Trending Searches</h2>
+        </div>
+      </div>
+    </script>
+
+    <script id="search_no_data_template" type="text/x-kendo-template">
+      <div class="slim_search_results_header no_data">
+        <div class="wrapper">
+          <h2>No Results</h2>
+        </div>
+      </div>
+    </script>
+
+    <script id="slim_multi_search_template" type="text/x-kendo-tmpl">
+      # if (data.media_type == 'movie') { #
+        <div class="slim_search_results slim">
+          <div class="wrapper">
+            <div class="glyphicons glyphicons-film"></div>
+            <p>#= data.title # <span>in Movies</span></p>
+          </div>
+        </div>
+      # } else if (data.media_type == 'tv') { #
+        <div class="slim_search_results slim">
+          <div class="wrapper">
+            <div class="glyphicons glyphicons-tv"></div>
+            <p>#= data.name # <span>in TV Shows</span></p>
+          </div>
+        </div>
+      # } else if (data.media_type == 'person') { #
+        <div class="slim_search_results slim">
+          <div class="wrapper">
+            <div class="glyphicons glyphicons-user"></div>
+            <p>#= data.name # <span>in People</span></p>
+          </div>
+        </div>
+      # } else { #
+        <div class="slim_search_results slim">
+          <div class="wrapper">
+            <div class="glyphicons glyphicons-search"></div>
+            <p>#= data #</p>
+          </div>
+        </div>
+      # } #
+    </script>
+
+    <script id="delete-confirmation" type="text/x-kendo-template">
+      <section class="window_content">
+        <p class="delete-message">Are you sure?</p>
+
+        <button class="delete-cancel k-button">No</button>
+        <button class="delete-confirm k-button">Yes</button>
+      </section>
+    </script>
+
+    <div id="dialog_window"></div>
+
+    <span id="notification" class="hide" data-role="notification" style="display: none;"></span>
+    <script id="errorTemplate" type="text/x-kendo-template">
+      <div class="notification error">
+        <span class="glyphicons glyphicons-exclamation-sign x1"></span>
+        <span class="left">
+          <h2>#= title #</h2>
+          # if (message instanceof Array) { #
+            <ul>
+              # for (var i = 0; i < message.length; i++) { #
+                <li>#= message[i] #</li>
+              # } #
+            </ul>
+          # } else { #
+            <p>#= message #</p>
+          # } #
+        </span>
+        <div class="clear"></div>
+      </div>
+    </script>
+
+    <script id="successTemplate" type="text/x-kendo-template">
+      <div class="notification success">
+        <span class="glyphicons glyphicons-ok x1"></span>
+        <span class="left">
+          <h2>#= title #</h2>
+          <p>#= message #</p>
+        </span>
+        <div class="clear"></div>
+      </div>
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "The Movie Database",
+        "alternateName": "TMDb",
+        "url": "https://www.themoviedb.org"
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+         "@context": "http://schema.org",
+         "@type": "WebSite",
+         "url": "https://www.themoviedb.org/",
+         "potentialAction": {
+           "@type": "SearchAction",
+           "target": "https://www.themoviedb.org/search?query={search_term_string}",
+           "query-input": "required name=search_term_string"
+         }
+      }
+    </script>
+
+  
+<div class="k-widget k-window" style="padding-top: 53px; min-width: 90px; min-height: 50px; display: none; top: 0px; left: 367.75px; position: fixed;"><div class="k-window-titlebar k-header" style="margin-top: -53px;"><span class="k-window-title">Keyboard Shortcuts</span><div class="k-window-actions"><a role="button" href="https://www.themoviedb.org/documentation/api/discover#" class="k-button k-bare k-button-icon k-window-action" aria-label="Close"><span class="k-icon k-i-close"></span></a></div></div><div class="content keyboard_shortcuts k-window-content k-content" data-role="window" tabindex="0" style="display: flex;">
+        <div class="column">
+          <h3>Global</h3>
+          <div><span>s</span> focus the search bar</div>
+          <div><span>p</span> open profile menu</div>
+          <div><span>esc</span> close an open window</div>
+          <div><span>?</span> open keyboard shortcut window</div>
+
+          <h3>On media pages</h3>
+          <div><span>b</span> go back (or to parent when applicable)</div>
+          <div><span>e</span> go to edit page</div>
+
+          <h3>On TV season pages</h3>
+          <div><span>→</span> (right arrow) go to next season</div>
+          <div><span>←</span> (left arrow) go to previous season</div>
+
+          <h3>On TV episode pages</h3>
+          <div><span>→</span> (right arrow) go to next episode</div>
+          <div><span>←</span> (left arrow) go to previous episode</div>
+
+          <h3>On all image pages</h3>
+          <div><span>a</span> open add image window</div>
+        </div>
+
+        <div class="column">
+          <h3>On all edit pages</h3>
+          <div><span>t</span> open translation selector</div>
+          <div><span>ctrl</span>+ <span>s</span> submit form</div>
+
+          <h3>On discussion pages</h3>
+          <div><span>n</span> create new discussion</div>
+          <div><span>w</span> toggle watching status</div>
+          <div><span>p</span> toggle public/private</div>
+          <div><span>c</span> toggle close/open</div>
+          <div><span>a</span> open activity</div>
+          <div><span>r</span> reply to discussion</div>
+          <div><span>l</span> go to last reply</div>
+          <div><span>ctrl</span>+ <span>enter</span> submit your message</div>
+          <div><span>→</span> (right arrow) next page</div>
+          <div><span>←</span> (left arrow) previous page</div>
+        </div>
+      </div></div><input type="file" id="" name="file" style="display: none;"><div data-v-cef78672="" class="container_selected_area" style="cursor: url(&quot;chrome-extension://ialiedlpfknneamnbemcgmaboleiccdd/assets/images/cursor-imagen.svg&quot;) 9 9, crosshair;"><div data-v-cef78672="" class="area"></div></div></body></html>
