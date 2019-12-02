@@ -3,7 +3,7 @@
 // Read more about the API here: https://developers.themoviedb.org/
 
 const API_URL =
-  "https://api.themoviedb.org/3/movie/550?api_key=f802f78f1352467b16144ecde1ac4141";
+  "https://api.themoviedb.org/3/";
 const API_KEY = "f802f78f1352467b16144ecde1ac4141";
 const IMAGE_BASE_URL = "http://image.tmdb.org/t/p/";
 // Sizes: w300, w780, w1280, original
